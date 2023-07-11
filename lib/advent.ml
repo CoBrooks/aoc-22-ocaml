@@ -7,3 +7,5 @@ let read_input path =
       List.rev acc
   in
   read_lines []
+
+let sum list = List.fold_left ( + ) 0 list

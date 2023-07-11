@@ -5,8 +5,8 @@ description: "My first project with OCaml; this is an educational project."
 maintainer: ["Me :)"]
 authors: ["Cole Brooks"]
 license: "MIT"
-homepage: "https://github.com/CoBrooks/AOC-22-ocaml"
-bug-reports: "https://github.com/CoBrooks/AOC-22-ocaml/issues"
+homepage: "https://github.com/CoBrooks/aoc-22-ocaml"
+bug-reports: "https://github.com/CoBrooks/aoc-22-ocaml/issues"
 depends: [
   "ocaml"
   "dune" {>= "3.4"}
@@ -26,4 +26,4 @@ build: [
     "@doc" {with-doc}
   ]
 ]
-dev-repo: "git+https://github.com/CoBrooks/AOC-22-ocaml.git"
+dev-repo: "git+https://github.com/CoBrooks/aoc-22-ocaml.git"

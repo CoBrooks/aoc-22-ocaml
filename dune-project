@@ -5,7 +5,7 @@
 (generate_opam_files true)
 
 (source
- (github CoBrooks/AOC-22-ocaml))
+ (github CoBrooks/aoc-22-ocaml))
 
 (authors "Cole Brooks")
 
