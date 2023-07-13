@@ -1,5 +1,7 @@
 open Advent
-open List
+open Advent.Input
+open Advent.List
+open Stdlib.List
 
 let input = read_input "inputs/day2.full"
 
@@ -7,10 +9,6 @@ let input_to_tuples input =
   let lines = map (String.split_on_char ' ') input in
   let to_tuple list = (nth list 0, nth list 1) in
   map to_tuple lines
-
-let tup_map f tup =
-  let a, b = tup in
-  (f a, f b)
 
 type move = Rock | Paper | Scissors
 
@@ -22,7 +20,7 @@ let strategy_guide_part1 =
     | x -> failwith (Printf.sprintf "Invalid input %s" x)
   in
   let pairs = input_to_tuples input in
-  map (tup_map parser) pairs
+  map (Tuple.map parser) pairs
 
 type outcome = Lose | Draw | Win
 

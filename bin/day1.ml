@@ -1,5 +1,6 @@
-open Advent
-open List
+open Advent.Input
+open Advent.List
+open Stdlib.List
 
 let input = read_input "inputs/day1.full"
 
@@ -15,16 +16,6 @@ let groups input =
     | [] -> sums
   in
   group [] [] input
-
-(** Takes the first n elements from a list *)
-let take n list =
-  let rec take_inner n acc rest =
-    match rest with
-    | _ when n == 0 -> rev acc
-    | head :: rest -> take_inner (n - 1) (head :: acc) rest
-    | _ -> failwith "unreachable"
-  in
-  take_inner n [] list
 
 let () =
   let elves = rev (sort Stdlib.compare (groups input)) in
