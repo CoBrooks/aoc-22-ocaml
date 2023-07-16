@@ -6,7 +6,7 @@ open Stdlib.List
 let input = read_input "inputs/day2.full"
 
 let input_to_tuples input =
-  let lines = map (String.split_on_char ' ') input in
+  let lines = map (Stdlib.String.split_on_char ' ') input in
   let to_tuple list = (nth list 0, nth list 1) in
   map to_tuple lines
 

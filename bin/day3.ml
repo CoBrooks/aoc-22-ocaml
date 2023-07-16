@@ -1,17 +1,9 @@
 open Advent.Input
 open Advent.List
+open Advent.String
 open Stdlib.List
 
 let input = read_input "inputs/day3.full"
-
-let explode string =
-  let rec exp string acc =
-    if String.length string == length acc then acc
-    else
-      let ch = String.get string (length acc) in
-      exp string (ch :: acc)
-  in
-  rev (exp string [])
 
 let compartments input =
   let parse_rucksack line =
