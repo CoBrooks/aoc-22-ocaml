@@ -80,7 +80,7 @@ let () =
     let proc = parse_proc input in
     sim crates proc
   in
-  let labels crates = 
+  let labels crates =
     let labels, _ = split crates in
     labels |> sort Stdlib.compare
     |> map (fun i -> assoc i crates)
